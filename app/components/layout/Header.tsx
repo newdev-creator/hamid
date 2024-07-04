@@ -7,6 +7,7 @@ import Cross from "../icons/Cross";
 import Logo from "./Logo";
 
 import navigationData from "./navigationData.json";
+import Button from "../ui/Button";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,6 +41,9 @@ export default function Header() {
               </Link>
             </li>
           ))}
+          <li className="py-4 lg:py-0 lg:mr-6 relative">
+            <Button href="#" label="contact" />
+          </li>
         </ul>
       </nav>
     </header>
