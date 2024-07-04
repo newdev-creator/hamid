@@ -9,9 +9,9 @@ const russoOne = Russo_One({
 export default function Logo() {
   return (
     <h1 className={`text-4xl md:flex md:w-7 md:mr-4 ${russoOne.className}`}>
-      <span className="text-blue">H</span>
-      <span className="text-white mr-2">amid </span>
-      <span className="text-blue">Coaching</span>
+      <span className="text-pink text-shadow-sm">H</span>
+      <span className="text-white mr-2 text-shadow-sm">amid </span>
+      <span className="text-pink text-shadow-sm">Coaching</span>
     </h1>
   );
 }
