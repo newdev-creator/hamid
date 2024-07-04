@@ -1,3 +1,4 @@
+import { Zilla_Slab, Russo_One } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -7,6 +8,10 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      Zilla_Slab: ["zilla slab", "sans-serif"],
+      Russo_One: ["russo one", "serif"],
+    },
     extend: {
       colors: {
         white: "#F7F7F7",
