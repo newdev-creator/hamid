@@ -7,6 +7,7 @@ import TitleCard from "../titles/TitleCard";
 
 import navigationData from "./navigationData.json";
 import legalMentionData from "./legalMentionsData.json";
+import Button from "../ui/Button";
 
 export default function Footer() {
   return (
@@ -23,7 +24,7 @@ export default function Footer() {
           With lots of unique blocks, you can easily build a page without
           coding. Build your next landing page.
         </p>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <Link
             href="#"
             className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-200"
@@ -36,6 +37,9 @@ export default function Footer() {
           >
             <Instagram />
           </Link>
+          
+          <Button href="#" label="contact" />
+
         </div>
       </div>
       <div className="flex gap-4">

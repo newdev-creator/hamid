@@ -21,6 +21,11 @@ const config: Config = {
         green: "#B5FE83",
         blue: "#003366",
         fontBlack: "#0F172A",
+        // gradient
+        blue1: "#003366",
+        blue2: "#0066CC",
+        pink1: "#DB2A6B",
+        pink2: "#751639"
       },
     },
   },
