@@ -10,8 +10,8 @@ import legalMentionData from "./legalMentionsData.json";
 
 export default function Footer() {
   return (
-    <footer className="bg-fontBlack text-white max-w-full mx-auto p-6 flex justify-between">
-      <div className="flex flex-col">
+    <footer className="bg-fontBlack text-white max-w-full mx-auto p-6 md:flex md:justify-between">
+      <div className="flex flex-col mb-6">
         <Link
           href="#"
           className="mb-4"
