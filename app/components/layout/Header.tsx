@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Menu from "../icons/Menu";
 import Cross from "../icons/Cross";
 import Logo from "./Logo";
@@ -10,27 +10,10 @@ import navigationData from "./navigationData.json";
 import Button from "../ui/Button";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-  }, []);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <header
-      className={`bg-orange z-50 top-0 w-full shadow ${
-        isScrolled ? "fixed" : ""
-      }`}
-    >
+    <header className="bg-orange z-50 fixed top-0 w-full shadow">
       <nav className="bg-orange max-w-full mx-auto p-6 flex items-center justify-between">
         <Link href="#" aria-label="Page d'accueil de Hamid Coaching">
           <Logo />

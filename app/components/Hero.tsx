@@ -3,7 +3,9 @@ import bg from "../../public/assets/img/bg-hero.jpg";
 
 export default function Hero() {
   return (
-    <div
+    <>
+      <div className="bg-orange w-full h-[5.5rem] md:h-24"></div>
+      <div
       className="bg-cover bg-center max-w-ful"
       style={{
         backgroundImage: `url(${bg.src})`,
@@ -29,6 +31,7 @@ export default function Hero() {
         </ul>
       </div>
     </div>
+    </>
   );
 }
 
