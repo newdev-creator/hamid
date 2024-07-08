@@ -1,41 +1,48 @@
 import React from "react";
 import bg from "../../public/assets/img/bg-hero.jpg";
+import ArrowRight from "./icons/ArrowRight";
 
 export default function Hero() {
   return (
     <>
       <div className="bg-orange w-full h-[5.5rem] md:h-24"></div>
       <div
-      className="bg-cover bg-center max-w-ful"
-      style={{
-        backgroundImage: `url(${bg.src})`,
-        width: "100%",
-        height: "100%",
-      }}
-    >
-      <div>
-        <h1>Bâtissons le meilleur de vous même</h1>
-        <p>Je vous guide pour atteindre votre objectif afin de révéler la vrai personne que vous voulez être</p>
+        className="bg-cover bg-center max-w-ful"
+        style={{
+          backgroundImage: `url(${bg.src})`,
+          width: "100%",
+          height: "100%",
+        }}
+      >
         <div>
-          <button>commencer maintenant</button>
-          <button>séance découverte 15€</button>
-          <p>en savoir plus -></p>
+          <h1>Bâtissons le meilleur de vous même</h1>
+          <p>
+            Je vous guide pour atteindre votre objectif afin de révéler la vrai
+            personne que vous voulez être
+          </p>
+          <div>
+            <button>commencer maintenant</button>
+            <button>séance découverte 15€</button>
+            <p className="flex items-center gap-2">
+              en savoir plus <ArrowRight />
+            </p>
+          </div>
+        </div>
+        <div>
+          <ul>
+            <li>cardio</li>
+            <li>crossfit</li>
+            <li>bodybuilding</li>
+            <li>boxing</li>
+          </ul>
         </div>
       </div>
-      <div>
-        <ul>
-          <li>cardio</li>
-          <li>crossfit</li>
-          <li>bodybuilding</li>
-          <li>boxing</li>
-        </ul>
-      </div>
-    </div>
     </>
   );
 }
 
-{/* 
+{
+  /* 
   <div className="flex-grow-0 flex-shrink-0 w-[1261px] h-[473px]">
     <div className="w-[1261px] h-[473px]">
       <div className="flex flex-col justify-start items-start w-[1261px] absolute left-40 top-[360px] gap-14">
@@ -106,4 +113,5 @@ export default function Hero() {
       </div>
     </div>
   </div>
-</div>; */}
+</div>; */
+}
