@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({ href, label, variant = "blue" }) => {
 
   return (
     <button
-      className={`text-2xl p-2 text-white capitalize ${gradientClass} rounded-tl-2xl rounded-tr-2xl rounded-br-2xl transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-200 ${russoOne.className}`}
+      className={`text-2xl p-2 mb-4 text-white capitalize ${gradientClass} rounded-tl-2xl rounded-tr-2xl rounded-br-2xl transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-200 ${russoOne.className}`}
     >
       <Link href={href}>{label}</Link>
     </button>

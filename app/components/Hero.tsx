@@ -1,35 +1,49 @@
 import React from "react";
+import { Russo_One } from "next/font/google";
+
+const russoOne = Russo_One({
+  subsets: ["latin"],
+  weight: "400",
+});
 import bg from "../../public/assets/img/bg-hero.jpg";
 import ArrowRight from "./icons/ArrowRight";
+import Button from "./ui/Button";
 
 export default function Hero() {
   return (
     <>
       <div className="bg-orange w-full h-[5.5rem] md:h-24"></div>
       <div
-        className="bg-cover bg-center max-w-ful"
+        className="relative bg-cover bg-center max-w-ful flex flex-col"
         style={{
           backgroundImage: `url(${bg.src})`,
           width: "100%",
           height: "100%",
         }}
       >
-        <div>
-          <h1>Bâtissons le meilleur de vous même</h1>
-          <p>
-            Je vous guide pour atteindre votre objectif afin de révéler la vrai
-            personne que vous voulez être
-          </p>
+        <div className="absolute inset-0 bg-black opacity-30"></div>
+        <div className="relative text-center px-10 pt-72 md:text-start md:ms-20">
           <div>
-            <button>commencer maintenant</button>
-            <button>séance découverte 15€</button>
-            <p className="flex items-center gap-2">
-              en savoir plus <ArrowRight />
+            <h2
+              className={`text-4xl md:text-6xl text-white capitalize ${russoOne.className}`}
+            >
+              Bâtissons le meilleur de vous même
+            </h2>
+            <p className="text-xl font-medium opacity-80 mb-4">
+              Je vous guide pour atteindre votre objectif afin de révéler la
+              vrai personne que vous voulez être
             </p>
+            <div className="">
+              <Button href="#" label="commencer maintenant" />
+              <Button href="#" label="séance découverte 15€" variant="pink" />
+              <p className="cursor-pointer hover:opacity-100 text-xl font-medium opacity-80 flex justify-center items-center gap-2">
+                en savoir plus <ArrowRight />
+              </p>
+            </div>
           </div>
         </div>
-        <div>
-          <ul>
+        <div className="px-10 text-xl font-medium opacity-80 mb-4 mt-20 underline underline-offset-8">
+          <ul className="flex justify-between items-center">
             <li>cardio</li>
             <li>crossfit</li>
             <li>bodybuilding</li>

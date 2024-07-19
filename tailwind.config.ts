@@ -24,8 +24,8 @@ const config: Config = {
         // gradient
         blue1: "#003366",
         blue2: "#0066CC",
-        pink1: "#DB2A6B",
-        pink2: "#751639"
+        pink1: "#751639",
+        pink2: "#DB2A6B",
       },
     },
   },
