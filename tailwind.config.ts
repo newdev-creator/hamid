@@ -8,6 +8,9 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      lg: "1130px",
+    },
     fontFamily: {
       Zilla_Slab: ["zilla slab", "sans-serif"],
       Russo_One: ["russo one", "serif"],
@@ -24,8 +27,8 @@ const config: Config = {
         // gradient
         blue1: "#003366",
         blue2: "#0066CC",
-        pink1: "#DB2A6B",
-        pink2: "#751639"
+        pink1: "#751639",
+        pink2: "#DB2A6B",
       },
     },
   },

@@ -10,7 +10,7 @@ import navigationData from "./navigationData.json";
 import Button from "../ui/Button";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
     <header className="bg-orange z-50 fixed top-0 w-full shadow">
