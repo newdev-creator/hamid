@@ -12,9 +12,9 @@ interface PropsTitleCard {
 
 const TitleCard: React.FC<PropsTitleCard> = ({ titleCard }) => {
   return (
-    <h3 className={`text-xl text-white capitalize ${russoOne.className}`}>
+    <h4 className={`text-xl text-white capitalize ${russoOne.className}`}>
       {titleCard}
-    </h3>
+    </h4>
   );
 };
 

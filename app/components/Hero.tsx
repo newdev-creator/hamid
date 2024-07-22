@@ -45,7 +45,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="px-10 lg:px-80 text-xl font-medium opacity-80 mb-4 mt-20 underline underline-offset-8">
+        <div className="px-10 lg:px-80 text-xl text-white font-medium opacity-80 mb-4 mt-20 underline underline-offset-8">
           <ul className="flex justify-between items-center gap-2">
             <li>cardio</li>
             <li>crossfit</li>
