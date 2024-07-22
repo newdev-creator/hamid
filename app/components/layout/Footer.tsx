@@ -21,7 +21,7 @@ export default function Footer() {
           >
             <Logo />
           </Link>
-          <p className="w-96 font-medium text-white mb-4">
+          <p className="w-full max-w-sm font-medium text-white mb-4">
             With lots of unique blocks, you can easily build a page without
             coding. Build your next landing page.
           </p>

@@ -14,7 +14,7 @@ export default function Hero() {
     <>
       <div className="bg-orange w-full h-[5.5rem]"></div>
       <div
-        className="relative bg-no-repeat  bg-cover bg-center lg:bg-[center_top_-8rem] max-w-ful flex flex-col"
+        className="relative bg-no-repeat bg-center lg:bg-[center_top_-8rem] max-w-ful flex flex-col"
         style={{
           backgroundImage: `url(${bg.src})`,
           width: "100%",
@@ -46,7 +46,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="px-10 lg:px-80 text-xl font-medium opacity-80 mb-4 mt-20 underline underline-offset-8">
-          <ul className="flex justify-between items-center">
+          <ul className="flex justify-between items-center gap-2">
             <li>cardio</li>
             <li>crossfit</li>
             <li>bodybuilding</li>

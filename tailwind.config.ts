@@ -8,6 +8,9 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      lg: "1130px",
+    },
     fontFamily: {
       Zilla_Slab: ["zilla slab", "sans-serif"],
       Russo_One: ["russo one", "serif"],
