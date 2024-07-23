@@ -8,18 +8,23 @@ const russoOne = Russo_One({
 
 interface PropsTitleSection {
   title: string;
-  description: string;
+  description?: string;
+  position?: string;
 }
 
-const TitleSection: React.FC<PropsTitleSection> = ({ title, description }) => {
+const TitleSection: React.FC<PropsTitleSection> = ({
+  title,
+  description,
+  position,
+}) => {
   return (
-    <div className="text-center text-white text-shadow-lg px-10 lg:px-72">
+    <div className={`${position} text-white text-shadow-lg`}>
       <h3
         className={`text-2xl lg:text-4xl mb-6 capitalize ${russoOne.className}`}
       >
         {title}
       </h3>
-      <p className="font-medium mb-6">{description}</p>
+      <p className="font-medium px-8 lg:px-72 mb-6">{description}</p>
     </div>
   );
 };
