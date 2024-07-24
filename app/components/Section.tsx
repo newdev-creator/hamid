@@ -4,7 +4,7 @@ import bg from "../../public/assets/img/shiny-overlay.svg";
 export default function Section(props: PropsWithChildren<{}>) {
   return (
     <section
-      className="bg-cover bg-center text-white max-w-full"
+      className="bg-cover bg-center text-white max-w-full pt-20"
       style={{
         backgroundImage: `url(${bg.src})`,
         width: "100%",
