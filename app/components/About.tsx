@@ -7,22 +7,22 @@ import Certificat from "./icons/Certificat";
 
 const features = [
   {
-    title: "titre1",
+    title: "Entrainer certifié",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: <Percent />,
+    icon: <Certificat />,
   },
   {
-    title: "titre1",
+    title: "Qualité des exercices",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: <Percent />,
+    icon: <Certificat />,
   },
   {
-    title: "titre1",
+    title: "Suivi régulié",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: <Percent />,
+    icon: <Healt />,
   },
   {
-    title: "titre1",
+    title: "Prix juste",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     icon: <Percent />,
   },
@@ -36,7 +36,7 @@ export default function About() {
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum ex, eius architecto voluptate quibusdam, ratione, molestias at dolores culpa natus quia impedit. Porro, quae. Totam minima tempore enim accusantium repellendus, nihil laudantium qui excepturi in cumque praesentium assumenda id at porro sit, culpa fugit delectus, vero expedita eum non?"
         position="text-center"
       />
-      <div className="flex flex-col lg:flex-row bg-fontBlack text-white">
+      <div className="flex flex-col lg:flex-row bg-fontBlack text-white mt-20">
         {/* Image */}
         <div className="lg:w-1/2">
           <Image
@@ -44,6 +44,7 @@ export default function About() {
             width={800}
             height={600}
             alt="Photo de Hamid"
+            className="rounded-r-full"
           />
         </div>
         {/* Content */}
@@ -60,8 +61,12 @@ export default function About() {
               <div className="flex gap-4" key={index}>
                 <div className="pt-2">{feature.icon}</div>
                 <div>
-                  <h4 className="text-xl font-bold">{feature.title}</h4>
-                  <p>{feature.description}</p>
+                  <h4 className="text-2xl lg:text-4xl capitalize font-bold">
+                    {feature.title}
+                  </h4>
+                  <p className="w-2/3 text-xl lg:text-2xl font-medium">
+                    {feature.description}
+                  </p>
                 </div>
               </div>
             ))}
