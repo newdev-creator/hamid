@@ -2,6 +2,7 @@ import React from "react";
 import TitleSection from "./titles/TitleSection";
 import Image from "next/image";
 import Button from "./ui/Button";
+import TitleCard from "./titles/TitleCard";
 
 const services = [
   {
@@ -36,7 +37,7 @@ export default function Service() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-fontBlack text-white rounded-lg overflow-hidden shadow-lg"
+              className="bg-fontBlack text-white rounded-lg overflow-hidden shadow-lg last:mb-4 lg:mb-20 lg:last:mb-20"
             >
               <div className="relative h-64">
                 <Image
@@ -47,13 +48,15 @@ export default function Service() {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                <TitleCard titleCard={service.title} />
                 <p className="whitespace-pre-line">{service.description}</p>
               </div>
             </div>
           ))}
         </div>
-        <Button href="#" label="commencer maintenant prenez rendez-vous" />
+        <div className="text-center">
+          <Button href="#" label="commencer maintenant prenez rendez-vous" />
+        </div>
       </div>
     </>
   );
