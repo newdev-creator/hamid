@@ -15,12 +15,12 @@ const services = [
     title: "Perte de poids",
     description:
       "3D BODY SCAN\nIN-DEPTH BODY ASSESSMENT\nPHYSICAL AND DIETARY ASSESSMENT",
-    image: "/assets/img/weightloss.webp",
+    image: "/assets/img/perte_de_poid.webp",
   },
   {
     title: "Remise en forme",
     description: "WEIGHT TRAINING\nRESISTANCE TRAINING\nRECOVERY TRAINING",
-    image: "/assets/img/fit.webp",
+    image: "/assets/img/remise_en_forme.webp",
   },
 ];
 
@@ -45,6 +45,7 @@ export default function Service() {
                   alt={service.title}
                   layout="fill"
                   objectFit="cover"
+                  className="object-top"
                 />
               </div>
               <div className="p-4">

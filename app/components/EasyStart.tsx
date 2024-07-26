@@ -38,7 +38,7 @@ export default function EasyStart() {
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="lg:w-1/2">
               <Image
-                src="/assets/img/woman-running.webp"
+                src="/assets/img/commencer.webp"
                 alt="Photo d'une femme qui court sur la plage"
                 layout="responsive"
                 width={500}
