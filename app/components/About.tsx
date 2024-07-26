@@ -40,10 +40,11 @@ export default function About() {
         {/* Image */}
         <div className="lg:w-1/2">
           <Image
-            src="/assets/img/about.webp"
+            src="/assets/img/bg-hero.jpg"
             width={800}
             height={600}
             alt="Photo de Hamid"
+            className="rounded-md"
           />
         </div>
         {/* Content */}
