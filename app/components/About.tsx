@@ -44,7 +44,7 @@ export default function About() {
             width={800}
             height={600}
             alt="Photo de Hamid"
-            className="rounded-r-full"
+            className="rounded-md"
           />
         </div>
         {/* Content */}

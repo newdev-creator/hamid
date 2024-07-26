@@ -1,4 +1,5 @@
 import About from "./components/About";
+import EasyStart from "./components/EasyStart";
 import Hero from "./components/Hero";
 import Section from "./components/Section";
 import Service from "./components/Service";
@@ -12,6 +13,9 @@ export default function Home() {
       </Section>
       <Section>
         <Service />
+      </Section>
+      <Section>
+        <EasyStart />
       </Section>
     </main>
   );
