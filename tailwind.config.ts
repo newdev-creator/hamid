@@ -9,7 +9,10 @@ const config: Config = {
   ],
   theme: {
     screens: {
+      sm: "640px",
+      md: "768px",
       lg: "1130px",
+      xl: "1280px",
     },
     fontFamily: {
       Zilla_Slab: ["zilla slab", "sans-serif"],
