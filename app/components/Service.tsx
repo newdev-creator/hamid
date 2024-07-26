@@ -9,18 +9,18 @@ const services = [
     title: "Fitness",
     description:
       "SPORTS CONDITIONING\nPERSONAL / GROUP TRAINING\nSPECIALTY SERVICES",
-    image: "/assets/img/fitness.webp",
+    image: "/assets/img/services/fitness.webp",
   },
   {
     title: "Perte de poids",
     description:
       "3D BODY SCAN\nIN-DEPTH BODY ASSESSMENT\nPHYSICAL AND DIETARY ASSESSMENT",
-    image: "/assets/img/perte_de_poid.webp",
+    image: "/assets/img/services/perte_de_poid.webp",
   },
   {
     title: "Remise en forme",
     description: "WEIGHT TRAINING\nRESISTANCE TRAINING\nRECOVERY TRAINING",
-    image: "/assets/img/remise_en_forme.webp",
+    image: "/assets/img/services/remise_en_forme.webp",
   },
 ];
 

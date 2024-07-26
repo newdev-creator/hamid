@@ -5,7 +5,7 @@ const russoOne = Russo_One({
   subsets: ["latin"],
   weight: "400",
 });
-import bg from "../../public/assets/img/bg-hero.webp";
+import bg from "../../public/assets/img/hero/bg_hero.webp";
 import ArrowRight from "./icons/ArrowRight";
 import Button from "./ui/Button";
 

@@ -42,7 +42,7 @@ export default function EasyStart() {
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="w-full lg:w-1/2">
               <Image
-                src="/assets/img/commencer.webp"
+                src="/assets/img/easy_start/commencer.webp"
                 alt="Fitness"
                 layout="responsive"
                 width={500}

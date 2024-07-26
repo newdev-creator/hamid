@@ -1,4 +1,5 @@
 import About from "./components/About";
+import CtaTwo from "./components/CtaTwo";
 import EasyStart from "./components/EasyStart";
 import Hero from "./components/Hero";
 import Section from "./components/Section";
@@ -16,6 +17,9 @@ export default function Home() {
       </Section>
       <Section>
         <EasyStart />
+      </Section>
+      <Section>
+        <CtaTwo />
       </Section>
     </main>
   );
