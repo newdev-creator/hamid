@@ -4,6 +4,12 @@ import Image from "next/image";
 import Percent from "./icons/Percent";
 import Healt from "./icons/Healt";
 import Certificat from "./icons/Certificat";
+import { Russo_One } from "next/font/google";
+
+const russoOne = Russo_One({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const features = [
   {
@@ -36,40 +42,40 @@ export default function About() {
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum ex, eius architecto voluptate quibusdam, ratione, molestias at dolores culpa natus quia impedit. Porro, quae. Totam minima tempore enim accusantium repellendus, nihil laudantium qui excepturi in cumque praesentium assumenda id at porro sit, culpa fugit delectus, vero expedita eum non?"
         position="text-center"
       />
-      <div className="flex flex-col lg:flex-row bg-fontBlack text-white mt-20">
-        {/* Image */}
-        <div className="lg:w-1/2">
-          <Image
-            src="/assets/img/bg-hero.jpg"
-            width={800}
-            height={600}
-            alt="Photo de Hamid"
-            className="rounded-md"
-          />
-        </div>
-        {/* Content */}
-        <div className="lg:w-1/2 flex flex-col justify-center p-8">
-          <div className="mb-10">
-            <TitleSection title="pourquoi me choisir" position="text-start" />
-            <TitleSection
-              title="Les meilleurs services"
-              position="text-start"
-            />
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div className="flex gap-4" key={index}>
-                <div className="pt-2">{feature.icon}</div>
-                <div>
-                  <h4 className="text-2xl lg:text-4xl capitalize font-bold">
-                    {feature.title}
-                  </h4>
-                  <p className="w-2/3 text-xl lg:text-2xl font-medium">
-                    {feature.description}
-                  </p>
-                </div>
+      <div className="w-full bg-fontBlack">
+        <div className="container mx-auto p-4 mt-20">
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            <div className="w-full lg:w-1/2">
+              <Image
+                src="/assets/img/bg-hero.webp"
+                alt="Fitness"
+                layout="responsive"
+                width={500}
+                height={300}
+                className="rounded-lg"
+              />
+            </div>
+            <div className="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-12 p-6 text-white">
+              <h3
+                className={`text-3xl uppercase font-bold mb-4 ${russoOne.className}`}
+              >
+                pourquoi me choisir
+              </h3>
+              <h3 className="text-2xl mb-8">Les meilleurs services</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="pt-2">{feature.icon}</div>
+                    <div>
+                      <h4 className="text-xl capitalize font-bold">
+                        {feature.title}
+                      </h4>
+                      <p>{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

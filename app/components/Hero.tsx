@@ -24,16 +24,16 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="relative text-center text-white px-10 lg:px-20 pt-72 lg:text-start lg:ms-20">
           <div>
-            <h2 className={`text-4xl lg:text-7xl ${russoOne.className}`}>
+            <h2 className={`text-4xl sm:text-7xl ${russoOne.className}`}>
               Bâtissons le meilleur
             </h2>
-            <h2 className={`text-4xl lg:text-7xl mb-9 ${russoOne.className}`}>
+            <h2 className={`text-4xl sm:text-7xl mb-9 ${russoOne.className}`}>
               de vous même
             </h2>
-            <p className="text-xl lg:text-2xl font-medium opacity-80">
+            <p className="text-xl sm:text-2xl font-medium opacity-80">
               Je vous guide pour atteindre votre objectif afin
             </p>
-            <p className="text-xl lg:text-2xl font-medium opacity-80 mb-9">
+            <p className="text-xl sm:text-2xl font-medium opacity-80 mb-9">
               de révéler la vrai personne que vous voulez être
             </p>
             <div className="lg:flex lg:gap-6 items-center">
