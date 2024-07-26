@@ -1,7 +1,12 @@
 import React from "react";
 import TitleSection from "./titles/TitleSection";
 import Image from "next/image";
-import TitleCard from "./titles/TitleCard";
+import { Russo_One } from "next/font/google";
+
+const russoOne = Russo_One({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const steps = [
   {
@@ -32,33 +37,47 @@ export default function EasyStart() {
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum ex, eius architecto voluptate quibusdam, ratione, molestias at dolores culpa natus quia impedit. Porro, quae. Totam minima tempore enim accusantium repellendus, nihil laudantium qui excepturi in cumque praesentium assumenda id at porro sit, culpa fugit delectus, vero expedita eum non?"
         position="text-center"
       />
-
-      <div className="bg-fontBlack mt-20">
-        <div className="max-w-7xl mx-auto">
+      <div className="w-full bg-fontBlack">
+        <div className="container mx-auto p-4 mt-20">
           <div className="flex flex-col lg:flex-row items-center justify-between">
-            <div className="lg:w-1/2">
+            <div className="w-full lg:w-1/2">
               <Image
                 src="/assets/img/commencer.webp"
-                alt="Photo d'une femme qui court sur la plage"
+                alt="Fitness"
                 layout="responsive"
                 width={500}
                 height={300}
+                className="rounded-lg"
               />
             </div>
-
-            <div className="w-full lg:w-1/2 mx-auto mt-8 lg:mt-0 lg:ml-52 p-6 rounded-lg">
+            <div className="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-12 p-6 text-white">
               <div className="space-y-8">
                 {steps.map((step) => (
-                  <div key={step.id} className="flex items-start space-x-4">
-                    <div className="bg-yellow text-fontBlack font-bold rounded-full w-10 h-10 flex items-center justify-center">
+                  <div key={step.id} className="flex justify-center gap-4">
+                    <div className="bg-yellow text-fontBlack font-bold rounded-full min-w-10 w-10 h-10 flex items-center justify-center">
                       {step.id}
                     </div>
                     <div>
-                      <TitleCard titleCard={step.title} />
-                      <p className="text-white w-1/2">{step.description}</p>
+                      <h3
+                        className={`text-3xl uppercase font-bold mb-4 ${russoOne.className}`}
+                      >
+                        {step.title}
+                      </h3>
+                      <p className="w-1/2">{step.description}</p>
                     </div>
                   </div>
                 ))}
+                {/* {features.map((feature, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="pt-2">{feature.icon}</div>
+                    <div>
+                      <h4 className="text-xl capitalize font-bold">
+                        {feature.title}
+                      </h4>
+                      <p>{feature.description}</p>
+                    </div>
+                  </div>
+                ))} */}
               </div>
             </div>
           </div>
