@@ -47,7 +47,7 @@ export default function About() {
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="w-full lg:w-1/2">
               <Image
-                src="/assets/img/bg-hero.webp"
+                src="/assets/img/about/about.webp"
                 alt="Fitness"
                 layout="responsive"
                 width={500}
