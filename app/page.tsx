@@ -2,6 +2,7 @@ import About from "./components/About";
 import CtaTwo from "./components/CtaTwo";
 import EasyStart from "./components/EasyStart";
 import Hero from "./components/Hero";
+import HomeOrGym from "./components/HomeOrGym";
 import Section from "./components/Section";
 import Service from "./components/Service";
 
@@ -20,6 +21,9 @@ export default function Home() {
       </Section>
       <Section>
         <CtaTwo />
+      </Section>
+      <Section>
+        <HomeOrGym />
       </Section>
     </main>
   );

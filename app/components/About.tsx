@@ -49,6 +49,7 @@ export default function About() {
             <div className="w-full lg:w-1/2">
               <Image src={AboutPic} alt="Fitness" className="rounded-lg" />
             </div>
+
             <div className="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-12 p-6 text-white">
               <h3
                 className={`text-3xl uppercase font-bold mb-4 ${russoOne.className}`}
