@@ -3,24 +3,27 @@ import TitleSection from "./titles/TitleSection";
 import Image from "next/image";
 import Button from "./ui/Button";
 import TitleCard from "./titles/TitleCard";
+import ServicePic1 from "../../public/assets/img/services/fitness.webp";
+import ServicePic2 from "../../public/assets/img/services/perte_de_poid.webp";
+import ServicePic3 from "../../public/assets/img/services/remise_en_forme.webp";
 
 const services = [
   {
     title: "Fitness",
     description:
       "SPORTS CONDITIONING\nPERSONAL / GROUP TRAINING\nSPECIALTY SERVICES",
-    image: "/assets/img/services/fitness.webp",
+    image: ServicePic1,
   },
   {
     title: "Perte de poids",
     description:
       "3D BODY SCAN\nIN-DEPTH BODY ASSESSMENT\nPHYSICAL AND DIETARY ASSESSMENT",
-    image: "/assets/img/services/perte_de_poid.webp",
+    image: ServicePic2,
   },
   {
     title: "Remise en forme",
     description: "WEIGHT TRAINING\nRESISTANCE TRAINING\nRECOVERY TRAINING",
-    image: "/assets/img/services/remise_en_forme.webp",
+    image: ServicePic3,
   },
 ];
 
@@ -39,15 +42,15 @@ export default function Service() {
               key={index}
               className="bg-fontBlack text-white rounded-lg overflow-hidden shadow-lg last:mb-4 lg:mb-20 lg:last:mb-20"
             >
-              <div className="relative h-64">
+              <div className="relative h-64 overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="object-top"
+                  fill={true}
+                  className="object-top object-cover"
                 />
               </div>
+
               <div className="p-4">
                 <TitleCard titleCard={service.title} />
                 <p className="whitespace-pre-line">{service.description}</p>

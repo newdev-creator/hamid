@@ -5,6 +5,7 @@ import Percent from "./icons/Percent";
 import Healt from "./icons/Healt";
 import Certificat from "./icons/Certificat";
 import { Russo_One } from "next/font/google";
+import AboutPic from "../../public/assets/img/about/about.webp";
 
 const russoOne = Russo_One({
   subsets: ["latin"],
@@ -46,14 +47,7 @@ export default function About() {
         <div className="container mx-auto p-4 mt-20">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="w-full lg:w-1/2">
-              <Image
-                src="/assets/img/about/about.webp"
-                alt="Fitness"
-                layout="responsive"
-                width={500}
-                height={300}
-                className="rounded-lg"
-              />
+              <Image src={AboutPic} alt="Fitness" className="rounded-lg" />
             </div>
             <div className="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-12 p-6 text-white">
               <h3

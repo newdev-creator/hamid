@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import Button from "./ui/Button";
+import CTAPic1 from "../../public/assets/img/CTA/kettelbelt.webp";
+import CTAPic2 from "../../public/assets/img/CTA/man_training.webp";
 
 export default function CtaTwo() {
   return (
@@ -8,7 +10,7 @@ export default function CtaTwo() {
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/4 mb-4 lg:mb-0 relative">
           <Image
-            src="/assets/img/CTA/kettelbelt.webp"
+            src={CTAPic1}
             alt="Image 1"
             width={200}
             height={200}
@@ -27,7 +29,7 @@ export default function CtaTwo() {
         </div>
         <div className="lg:w-1/4 relative">
           <Image
-            src="/assets/img/CTA/man_training.webp"
+            src={CTAPic2}
             alt="Image 2"
             width={200}
             height={200}
