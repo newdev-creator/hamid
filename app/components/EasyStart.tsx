@@ -1,8 +1,8 @@
 import React from "react";
 import TitleSection from "./titles/TitleSection";
 import Image from "next/image";
-import { Russo_One } from "next/font/google";
 import EasyStartPic from "../../public/assets/img/easy_start/commencer.webp";
+import { Russo_One } from "next/font/google";
 
 const russoOne = Russo_One({
   subsets: ["latin"],
@@ -42,8 +42,13 @@ export default function EasyStart() {
         <div className="container mx-auto p-4 mt-20">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="w-full lg:w-1/2">
-              <Image src={EasyStartPic} alt="Fitness" className="rounded-lg" />
+              <Image
+                src={EasyStartPic}
+                alt="Fitness"
+                className="rounded-lg mx-auto"
+              />
             </div>
+
             <div className="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-12 p-6 text-white">
               <div className="space-y-8">
                 {steps.map((step) => (
@@ -61,17 +66,6 @@ export default function EasyStart() {
                     </div>
                   </div>
                 ))}
-                {/* {features.map((feature, index) => (
-                  <div key={index} className="flex gap-4">
-                    <div className="pt-2">{feature.icon}</div>
-                    <div>
-                      <h4 className="text-xl capitalize font-bold">
-                        {feature.title}
-                      </h4>
-                      <p>{feature.description}</p>
-                    </div>
-                  </div>
-                ))} */}
               </div>
             </div>
           </div>
