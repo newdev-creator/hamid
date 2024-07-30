@@ -47,7 +47,11 @@ export default function About() {
         <div className="container mx-auto p-4 mt-20">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="w-full lg:w-1/2">
-              <Image src={AboutPic} alt="Fitness" className="rounded-lg" />
+              <Image
+                src={AboutPic}
+                alt="Fitness"
+                className="rounded-lg mx-auto"
+              />
             </div>
 
             <div className="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-12 p-6 text-white">
