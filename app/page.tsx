@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Contact from "./components/Contact";
 import CtaTwo from "./components/CtaTwo";
 import EasyStart from "./components/EasyStart";
 import Hero from "./components/Hero";
@@ -28,6 +29,9 @@ export default function Home() {
       </Section>
       <Section>
         <Price />
+      </Section>
+      <Section>
+        <Contact />
       </Section>
     </main>
   );
