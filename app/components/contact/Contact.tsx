@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import TitleSection from "../titles/TitleSection";
 import ContactSide from "./ContactSide";
 

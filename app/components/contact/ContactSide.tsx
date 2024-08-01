@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import TitleCard from "../titles/TitleCard";
 import { Mail, MapPin, PhoneCall } from "lucide-react";
