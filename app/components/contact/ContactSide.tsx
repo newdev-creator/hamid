@@ -40,7 +40,7 @@ export default function ContactSide() {
   };
 
   return (
-    <div className="bg-fontBlack text-white p-6 rounded-lg shadow-md w-full md:w-1/2 lg:w-1/3 mb-8 md:mb-0">
+    <div className="bg-fontBlack text-white p-6 rounded-lg shadow-md w-full md:w-1/2 lg:w-1/3 mb-8 md:mb-0 absolute top-1 left-5 right-0 z-10">
       <TitleCard titleCard="contact" />
       <p className="mb-4">Say something to start a live chat!</p>
 
