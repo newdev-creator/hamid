@@ -1,5 +1,5 @@
 import About from "./components/About";
-import Contact from "./components/Contact";
+import Contact from "./components/contact/Contact";
 import CtaTwo from "./components/CtaTwo";
 import EasyStart from "./components/EasyStart";
 import Hero from "./components/Hero";
