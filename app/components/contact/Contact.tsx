@@ -1,7 +1,7 @@
 import React from "react";
 import TitleSection from "../titles/TitleSection";
-import ContactSide from "./ContactSide";
 import GoogleMap from "./map/GoogleMap";
+import Form from "./Form";
 
 export default function Contact() {
   return (
@@ -17,7 +17,7 @@ export default function Contact() {
           <GoogleMap />
         </div>
         {/* contact */}
-        <ContactSide />
+        <Form />
         <div className="w-full block md:hidden md:h-[710px] md:relative">
           <GoogleMap />
         </div>

@@ -1,3 +1,4 @@
+import "../env";
 import type { Metadata } from "next";
 import { Russo_One } from "next/font/google";
 import { Zilla_Slab } from "next/font/google";

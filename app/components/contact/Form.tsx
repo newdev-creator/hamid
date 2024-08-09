@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import TitleCard from "../titles/TitleCard";
 import { Mail, MapPin, PhoneCall } from "lucide-react";
 import Input from "./inputs/Input";
@@ -9,34 +9,90 @@ import Link from "next/link";
 import Facebook from "../icons/Facebook";
 import Instagram from "../icons/Instagram";
 
-export default function ContactSide() {
-  const form = useRef<HTMLFormElement>(null);
+const Validate = () => {
+  return (
+    <p className="bg-sky-400 text-white p-2 mt-4 text-center rounded-md w-full scale-100 transition duration-300">
+      Votre message a bien été envoyé !
+    </p>
+  );
+};
 
+const Warning = ({ errors }: { errors: string[] }) => {
+  return (
+    <div className="bg-red-600 text-white p-2 mt-4 text-center rounded-md w-full scale-100 transition duration-300">
+      {/* <p>Une erreur est survenue, veuillez réessayer plus tard.</p> */}
+      {errors && errors.length > 0 && (
+        <ul>
+          {errors.map((error, index) => (
+            <li key={index}>{error}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+export default function Form() {
   const [formLoaded, setFormLoaded] = useState<boolean>(false);
+  const [firstname, setFirstname] = useState<string>("");
+  const [lastname, setLastname] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [result, setResult] = useState<boolean>(false);
+  const [warning, setWarning] = useState<boolean>(false);
+  const [errors, setErrors] = useState<string[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setFormLoaded(true);
   }, []);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(form.current);
+    setLoading(true);
+    setResult(false);
+    setWarning(false);
+    setErrors([]);
 
-    // emailjs
-    //   .sendForm(
-    //     "YOUR_SERVICE_ID",
-    //     "YOUR_TEMPLATE_ID",
-    //     form.current,
-    //     "YOUR_PUBLIC_KEY"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    try {
+      const res = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstname,
+          lastname,
+          email,
+          phone,
+          message,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setResult(true);
+        setWarning(false);
+        setFirstname("");
+        setLastname("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+      } else {
+        setResult(false);
+        setWarning(true);
+        if (data.errors) {
+          setErrors(data.errors.map((err: any) => err.message));
+        }
+      }
+    } catch (error) {
+      console.log("Error email: ", error);
+      setWarning(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -64,44 +120,54 @@ export default function ContactSide() {
 
       {/* form */}
       {formLoaded ? (
-        <form ref={form} onSubmit={sendEmail} className="space-y-4 mb-4">
+        <form onSubmit={sendMessage} className="space-y-4 mb-4">
           <div className="flex space-x-4">
             <Input
+              onChange={(e) => setFirstname(e.target.value)}
               label="Nom"
               type="text"
-              name="user_firstname"
+              name="firstname"
               placeholder="John"
+              value={firstname}
             />
             <Input
+              onChange={(e) => setLastname(e.target.value)}
               label="Prénom"
               type="text"
-              name="user_lastname"
-              placeholder="doe"
+              name="lastname"
+              placeholder="Doe"
+              value={lastname}
             />
           </div>
 
           <div className="flex space-x-4">
             <Input
+              onChange={(e) => setEmail(e.target.value)}
               label="Email"
               type="email"
-              name="user_email"
+              name="email"
               placeholder="JohnDoe@mail.com"
+              value={email}
             />
             <Input
+              onChange={(e) => setPhone(e.target.value)}
               label="Téléphone"
               type="tel"
-              name="user_phone"
+              name="phone"
               placeholder="0600000000"
+              value={phone}
             />
           </div>
 
           <div>
             <label className="block text-white">Message</label>
             <textarea
+              onChange={(e) => setMessage(e.target.value)}
               name="message"
               className="w-full p-2 text-fontBlack border border-gray-300 rounded-md"
               rows={4}
               placeholder="Votre message..."
+              value={message}
             />
           </div>
 
@@ -109,9 +175,12 @@ export default function ContactSide() {
             <button
               type="submit"
               className="bg-green-600 hover:bg-green-400 text-white p-2 rounded-md w-full transition duration-300"
+              disabled={loading}
             >
-              Envoyer
+              {loading ? "Envoi en cours..." : "Envoyer"}
             </button>
+            {result ? <Validate /> : null}
+            {warning ? <Warning errors={errors} /> : null}
           </div>
         </form>
       ) : (
