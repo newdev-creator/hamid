@@ -24,7 +24,7 @@ const config: Config = {
         pink: "#DB2A6B",
         orange: "#FFB72B",
         yellow: "#FFE61B",
-        green: "#B5FE83",
+        // green: "#B5FE83",
         blue: "#003366",
         fontBlack: "#0F172A",
         // gradient
