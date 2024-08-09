@@ -1,7 +1,7 @@
 [
-  { "href": "#", "label": "Accueil" },
-  { "href": "#", "label": "A propos" },
-  { "href": "#", "label": "Mes services" },
-  { "href": "#", "label": "Chez vous ou en salle" },
-  { "href": "#", "label": "Tarifs" }
+  { "href": "#home", "label": "Accueil" },
+  { "href": "#about", "label": "A propos" },
+  { "href": "#service", "label": "Mes services" },
+  { "href": "#home_or_gym", "label": "Chez vous ou en salle" },
+  { "href": "#price", "label": "Tarifs" }
 ]

@@ -37,7 +37,7 @@ const features = [
 
 export default function About() {
   return (
-    <>
+    <div>
       <TitleSection
         title="à propos"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum ex, eius architecto voluptate quibusdam, ratione, molestias at dolores culpa natus quia impedit. Porro, quae. Totam minima tempore enim accusantium repellendus, nihil laudantium qui excepturi in cumque praesentium assumenda id at porro sit, culpa fugit delectus, vero expedita eum non?"
@@ -78,6 +78,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

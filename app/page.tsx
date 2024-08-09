@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <Section>
+      <Section id="about">
         <About />
       </Section>
-      <Section>
+      <Section id="service">
         <Service />
       </Section>
       <Section>
@@ -24,13 +24,13 @@ export default function Home() {
       <Section>
         <CtaTwo />
       </Section>
-      <Section>
+      <Section id="home_or_gym">
         <HomeOrGym />
       </Section>
-      <Section>
+      <Section id="price">
         <Price />
       </Section>
-      <Section>
+      <Section id="contact">
         <Contact />
       </Section>
     </main>

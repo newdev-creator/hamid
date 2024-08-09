@@ -12,7 +12,7 @@ import Button from "./ui/Button";
 export default function Hero() {
   return (
     <>
-      <div className="bg-orange w-full h-[5.5rem]"></div>
+      <div id="home" className="bg-orange w-full h-[5.5rem]"></div>
       <div
         className="relative bg-no-repeat bg-center lg:bg-[center_top_-8rem] max-w-ful flex flex-col"
         style={{

@@ -11,9 +11,15 @@ interface ButtonProps {
   href: string;
   label: string;
   variant?: "blue" | "pink";
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button: React.FC<ButtonProps> = ({ href, label, variant = "blue" }) => {
+const Button: React.FC<ButtonProps> = ({
+  href,
+  label,
+  variant = "blue",
+  onClick,
+}) => {
   const gradientClass =
     variant === "blue"
       ? "bg-gradient-to-t from-blue1 to-blue2"
@@ -21,6 +27,7 @@ const Button: React.FC<ButtonProps> = ({ href, label, variant = "blue" }) => {
 
   return (
     <button
+      onClick={onClick}
       className={`text-2xl p-4 mb-4 sm:mr-4 lg:mr-0 md:mb-0 text-white capitalize ${gradientClass} rounded-tl-2xl rounded-tr-2xl rounded-br-2xl transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-200 ${russoOne.className}`}
     >
       <Link href={href}>{label}</Link>

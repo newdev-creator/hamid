@@ -42,7 +42,11 @@ export default function Header() {
             </li>
           ))}
           <li className="py-4 lg:py-0 lg:mr-6 relative">
-            <Button href="#" label="contact" />
+            <Button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              href="#contact"
+              label="contact"
+            />
           </li>
         </ul>
       </nav>
