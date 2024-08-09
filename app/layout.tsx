@@ -1,3 +1,4 @@
+import "../env";
 import type { Metadata } from "next";
 import { Russo_One } from "next/font/google";
 import { Zilla_Slab } from "next/font/google";
@@ -25,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={zillaSlab.className}>
         <Header />
         {children}
